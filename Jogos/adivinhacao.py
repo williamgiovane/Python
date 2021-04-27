@@ -14,8 +14,12 @@ for rodada in range (1, total_tentativas + 1):
     print("\nTentativa: ", rodada, " de ", total_tentativas)
 
     #Pergunta para o usuario
-    chute = int(input("Digite o seu número: "))
+    chute = int(input("Digite o seu número entre 1 e 100: "))
     print("Você digitou: ", chute)
+
+    if((chute < 1) or (chute > 100)):
+        print("\nVocê deve digitar um número entre 1 e 100")
+        continue
 
     #Condições para o if
     acertou = chute == numero_secreto 
@@ -25,11 +29,11 @@ for rodada in range (1, total_tentativas + 1):
     #Testas condições
     if (acertou):
         print("\nVocê acertou!")
-    else:
-        if (maior):
-            print ("\nVocê errou, o seu chute foi maior que o numero secreto")
-        elif (menor):
-            print ("\nVocê errou, o seu chute foi menor que o numero secreto")
+        break
+    elif (maior):
+        print ("\nVocê errou, o seu chute foi maior que o numero secreto")
+    elif (menor):
+        print ("\nVocê errou, o seu chute foi menor que o numero secreto")
 
     #total_tentativas = total_tentativas + 1
 
