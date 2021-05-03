@@ -8,10 +8,15 @@ print("*********************************")
 numero_secreto = random.randrange(1, 101)
 
 #Tentativas
-total_tentativas = 3
-#chute = 0
+nivel = int(input("Qual o niv1el de dificuldade? \n(1) Facil (2) Medio (3)Dificil\n"))
 
-#while ((chute != numero_secreto) and (total_tentativas <= 3)):
+if(nivel == 1):
+    total_tentativas = 20
+elif(nivel == 2):
+    total_tentativas = 10
+else:
+    total_tentativas = 5
+
 for rodada in range (1, total_tentativas + 1):
     print("\nTentativa: ", rodada, " de ", total_tentativas)
 
@@ -36,7 +41,5 @@ for rodada in range (1, total_tentativas + 1):
         print ("\nVocê errou, o seu chute foi maior que o numero secreto")
     elif (menor):
         print ("\nVocê errou, o seu chute foi menor que o numero secreto")
-
-    #total_tentativas = total_tentativas + 1
 
 print("\nFim do jogo, o numero secreto era: ", numero_secreto)
