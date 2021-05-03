@@ -1,13 +1,15 @@
+import random
+
 print("\n*********************************")
 print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
 #Resposta
-numero_secreto = 42
+numero_secreto = random.randrange(1, 101)
 
 #Tentativas
 total_tentativas = 3
-chute = 0
+#chute = 0
 
 #while ((chute != numero_secreto) and (total_tentativas <= 3)):
 for rodada in range (1, total_tentativas + 1):
@@ -37,4 +39,4 @@ for rodada in range (1, total_tentativas + 1):
 
     #total_tentativas = total_tentativas + 1
 
-print("\nFim do jogo")
+print("\nFim do jogo, o numero secreto era: ", numero_secreto)
