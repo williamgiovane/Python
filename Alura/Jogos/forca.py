@@ -6,7 +6,7 @@ def jogar():
     palavra_secreta = "Banana".lower()
     letras_acertadas = ["_", "_", "_", "_", "_", "_"]
 
-    print("\nA palavra contem {} letras".format(len(letras_acertadas)))
+    print("\nA palavra contem {} letras".format(len(palavra_secreta)))
 
     enforcou = False
     acertou = False
@@ -26,19 +26,24 @@ def jogar():
             print("\nPalavra:", letras_acertadas)
 
             letras_restantes = int(letras_acertadas.count('_'))
+            tentivas_restantes = len(palavra_secreta) - tentivas
+            tentivas += 1
+
+            print(tentivas_restantes)
 
             if(letras_restantes == 0):
                 print("Parabéns você acertou a palavra!")
                 acertou = True
             else:
-                print("\nAinda faltam acertar {} letras".format(letras_restantes))
-            
-            tentivas += 1
+                print("\nAinda faltam acertar {} letras e você tem {} tentativas".format(letras_restantes, tentivas_restantes))
         else:
             if(tentivas == len(palavra_secreta)):
                 enforcou = True
             else:
+                tentivas_restantes = len(palavra_secreta) - tentivas
                 tentivas += 1
+                print("\nPalavra:", letras_acertadas)
+                print("\nAinda faltam acertar {} letras e você tem {} tentativas".format(letras_restantes, tentivas_restantes))
 
     print("\nFim do jogo!")
 
