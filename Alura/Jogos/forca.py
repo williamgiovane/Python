@@ -21,8 +21,16 @@ def jogar():
 
             index = index + 1
 
-        print(letras_acertadas)
-    
+        print("\nPalavra:", letras_acertadas)
+
+        letras_restantes = int(letras_acertadas.count('_'))
+
+        if(letras_restantes != 0):
+            print("\nAinda faltam acertar {} letras".format(letras_restantes))
+        else:
+            print("Parabéns você acertou a palavra!")
+            acertou = True
+
     print("\nFim do jogo!")
 
 if(__name__ == "__main__"):
