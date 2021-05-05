@@ -32,8 +32,10 @@ def jogar():
                 acertou = True
             else:
                 print("\nAinda faltam acertar {} letras".format(letras_restantes))
+            
+            tentivas += 1
         else:
-            if(tentivas == 6):
+            if(tentivas == len(palavra_secreta)):
                 enforcou = True
             else:
                 tentivas += 1
