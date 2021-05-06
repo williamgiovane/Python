@@ -19,8 +19,6 @@ def jogar():
 
     letras_acertadas = ["_" for letra in palavra_secreta]
 
-    print(palavra_secreta)
-
     print("\nA palavra contem {} letras".format(len(palavra_secreta)))
 
     enforcou = False
